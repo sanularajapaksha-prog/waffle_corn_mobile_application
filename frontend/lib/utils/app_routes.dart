@@ -20,6 +20,7 @@ import '../screens/rules_screen.dart';
 import '../screens/sign_in_screen.dart';
 import '../screens/sign_up_screen.dart';
 import '../screens/splash_screen.dart';
+import '../screens/verification_screen.dart';
 
 class AppRoutes {
   AppRoutes._();
@@ -29,6 +30,7 @@ class AppRoutes {
   static const signIn = '/sign-in';
   static const signUp = '/sign-up';
   static const forgotPassword = '/forgot-password';
+  static const verification = '/verification';
   static const home = '/home';
   static const productDetail = '/product-detail';
   static const productListing = '/product-listing';
@@ -66,6 +68,15 @@ class AppRoutes {
       case productDetail:
         return _fadeRoute(
           ProductDetailScreen(cone: settings.arguments as WaffleCone),
+          settings,
+        );
+      case verification:
+        final args = settings.arguments as Map<String, dynamic>?;
+        return _fadeRoute(
+          VerificationScreen(
+            email: args?['email'] as String? ?? '',
+            returnToHome: args?['returnToHome'] as bool? ?? false,
+          ),
           settings,
         );
       case productListing:
