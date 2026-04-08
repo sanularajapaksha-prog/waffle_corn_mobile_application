@@ -37,35 +37,34 @@ class _SignInScreenState extends State<SignInScreen> {
       ),
       child: Scaffold(
         backgroundColor: AppColors.background,
-        body: SafeArea(
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                const AuthHeader(
-                  title: 'Log In',
-                  subtitle:
-                      'Sign in to manage orders, saved addresses, and your waffle cone checkout flow.',
-                ),
-                Transform.translate(
-                  offset: const Offset(0, -24),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Container(
-                      padding: const EdgeInsets.fromLTRB(20, 24, 20, 28),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(30),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.06),
-                            blurRadius: 24,
-                            offset: const Offset(0, 14),
-                          ),
-                        ],
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              const AuthHeader(
+                title: 'Log In',
+                subtitle:
+                    'Sign in to manage orders, saved addresses, and your waffle cone checkout flow.',
+              ),
+              Transform.translate(
+                offset: const Offset(0, -24),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Container(
+                    padding: const EdgeInsets.fromLTRB(20, 24, 20, 28),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(30),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.06),
+                          blurRadius: 24,
+                          offset: const Offset(0, 14),
+                        ),
+                      ],
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
                         CustomTextField(
                           label: 'EMAIL',
                           hintText: 'sanula@example.com',
@@ -200,13 +199,12 @@ class _SignInScreenState extends State<SignInScreen> {
                             ),
                           ],
                         ),
-                        ],
-                      ),
+                      ],
                     ),
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),

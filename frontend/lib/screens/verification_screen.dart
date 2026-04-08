@@ -87,34 +87,33 @@ class _VerificationScreenState extends State<VerificationScreen> {
       ),
       child: Scaffold(
         backgroundColor: AppColors.background,
-        body: SafeArea(
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                AuthHeader(
-                  title: 'Verification',
-                  subtitle:
-                      'Enter the secure code sent to ${widget.email.isEmpty ? 'your email' : widget.email}.',
-                ),
-                Transform.translate(
-                  offset: const Offset(0, -24),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Container(
-                      padding: const EdgeInsets.fromLTRB(20, 24, 20, 24),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(30),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.06),
-                            blurRadius: 24,
-                            offset: const Offset(0, 14),
-                          ),
-                        ],
-                      ),
-                      child: Column(
-                        children: [
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              AuthHeader(
+                title: 'Verification',
+                subtitle:
+                    'Enter the secure code sent to ${widget.email.isEmpty ? 'your email' : widget.email}.',
+              ),
+              Transform.translate(
+                offset: const Offset(0, -24),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Container(
+                    padding: const EdgeInsets.fromLTRB(20, 24, 20, 24),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(30),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.06),
+                          blurRadius: 24,
+                          offset: const Offset(0, 14),
+                        ),
+                      ],
+                    ),
+                    child: Column(
+                      children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -160,13 +159,12 @@ class _VerificationScreenState extends State<VerificationScreen> {
                           label: 'Verify',
                           onPressed: _verify,
                         ),
-                        ],
-                      ),
+                      ],
                     ),
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),

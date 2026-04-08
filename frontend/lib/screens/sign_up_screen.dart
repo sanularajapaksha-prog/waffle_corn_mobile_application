@@ -48,25 +48,24 @@ class _SignUpScreenState extends State<SignUpScreen> {
         statusBarColor: Colors.transparent,
       ),
       child: Scaffold(
-        body: SafeArea(
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                const AuthHeader(
-                  title: 'Sign Up',
-                  subtitle:
-                      'Create your account to save addresses, manage orders, and speed up future waffle cone checkouts.',
-                ),
-                Transform.translate(
-                  offset: const Offset(0, -24),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Container(
-                      padding: const EdgeInsets.fromLTRB(20, 24, 20, 28),
-                      decoration: _signUpCardDecoration(),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              const AuthHeader(
+                title: 'Sign Up',
+                subtitle:
+                    'Create your account to save addresses, manage orders, and speed up future waffle cone checkouts.',
+              ),
+              Transform.translate(
+                offset: const Offset(0, -24),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Container(
+                    padding: const EdgeInsets.fromLTRB(20, 24, 20, 28),
+                    decoration: _signUpCardDecoration(),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
                         CustomTextField(
                           label: 'FULL NAME',
                           hintText: 'Sanula Rajapaksha',
@@ -123,13 +122,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           label: 'Create Account',
                           onPressed: _goToVerification,
                         ),
-                        ],
-                      ),
+                      ],
                     ),
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),

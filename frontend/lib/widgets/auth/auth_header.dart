@@ -19,9 +19,11 @@ class AuthHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final topInset = MediaQuery.paddingOf(context).top;
+
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.fromLTRB(20, 18, 20, 34),
+      padding: EdgeInsets.fromLTRB(20, topInset + 18, 20, 34),
       decoration: const BoxDecoration(
         color: AppColors.deepNavy,
         borderRadius: BorderRadius.vertical(

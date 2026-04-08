@@ -40,25 +40,24 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
         statusBarColor: Colors.transparent,
       ),
       child: Scaffold(
-        body: SafeArea(
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                const AuthHeader(
-                  title: 'Forgot Password',
-                  subtitle:
-                      'Enter your email address and we will send a verification code to reset your account access.',
-                ),
-                Transform.translate(
-                  offset: const Offset(0, -24),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Container(
-                      padding: const EdgeInsets.fromLTRB(20, 24, 20, 28),
-                      decoration: _forgotPasswordCardDecoration(),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              const AuthHeader(
+                title: 'Forgot Password',
+                subtitle:
+                    'Enter your email address and we will send a verification code to reset your account access.',
+              ),
+              Transform.translate(
+                offset: const Offset(0, -24),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Container(
+                    padding: const EdgeInsets.fromLTRB(20, 24, 20, 28),
+                    decoration: _forgotPasswordCardDecoration(),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
                         CustomTextField(
                           label: 'EMAIL',
                           hintText: 'example@puffywoffle.com',
@@ -71,13 +70,12 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                           label: 'Send Code',
                           onPressed: _sendCode,
                         ),
-                        ],
-                      ),
+                      ],
                     ),
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
